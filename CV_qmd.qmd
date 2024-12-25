@@ -1,0 +1,166 @@
+---
+title: Untitled
+format:
+  modern2-cv-pdf: default
+author: Daniel Enriquez-Vera
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 
+  main: 348b0e
+  accent: 257b00
+jobtitle: PhD(c) at **Kagoshima University**
+sidebar:
+  image: profilepic.jpg
+  bullets:
+    - Kagoshima, Japan.
+    - 36 years-old Peruvian clinician-scientist.
+  sections: 
+    - name: Skills
+      items:
+        - text: R
+          exp: 
+            text: "5+ yrs."
+            num: 0.8
+        - text: Python
+          exp: 
+            text: "3+ yrs."
+            num: 0.6
+        - text: Rmarkdown
+          exp: 
+            text: "3+ yrs."
+            num: 0.6
+        - text: Quarto
+          exp: 
+            text: "3+ yr."
+            num: 0.8
+        - text: Data Analysis
+          exp: 
+            text: "7+ years"
+            num: 0.9
+    - name: Tools
+      items:
+        - Git
+        - RStudio
+        - VS Code, Positron
+        - Terminal (bash)
+    - name: QR code
+      items:
+    - name: Education
+      items:
+        - text: "Ph.D. in Virology-Immunology"
+          inst: "Kagoshima University"
+          time: "04/2022 - 04/2026"
+          details: "Thesis: ---"
+        - text: "Master in Oncology"
+          inst: "Universidad Privada Cayetano Heredia"
+          time: "07/2019 - 07/2021"
+          details: "Thesis: -----"
+        - text: "Clinical research fellowship in Hematology/Oncology"
+          inst: "Peruvian National Cancer Institute (INEN)"
+          time: "07/2017 - 07/2018"
+        - text: "Medical Oncology Residency"
+          inst: "Universidad Privada Cayetano Heredia (UPCH)"
+          time: "07/2013 - 06/2017"
+        - text: "Medical Doctor (MD)"
+          inst: "Universidad Nacional Pedro Ruiz Gallo (UNPRG)"
+          time: "03/2005 - 03/2012"
+    - name: Contact
+      items:
+        - icon: map-marker
+          text: Kagoshima, Japan
+        - icon: phone
+          text: "+(81)-80-5796-1424"
+        - icon: envelope
+          text: daniel.enriquez.v@upch.pe
+        - icon: home
+          text: The Leuk-chemist
+          href: https://deve105.github.io/me/
+        - icon: github
+          text: deve105
+          href: https://github.com/deve105
+        - icon: twitter
+          text: denve105
+          href: https://twitter.com/denve105
+        - icon: orcid
+          text: 0000-0002-0855-8936
+          href: https://orcid.org/0000-0002-0855-8936       
+execute: 
+  echo: false
+---
+
+```{r}
+#| label: cvevents
+cvevents <- function(tbl, when, what, where, descr) {
+
+    command_start <- "\\cvevent"
+    tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}", 
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}",
+        "{", tbl[[descr]], "}"
+        )
+
+    cat(res, sep = "\n\n\n")
+}
+
+cvproj <- function(tbl,what,role,items){
+    command_start <- "\\cvproj"
+    res <- paste0(
+        command_start, "{", tbl[[what]], "}",
+        "{", tbl[[role]], "}",
+        "{", sapply(tbl[[items]], function(x)paste0(x,collapse = ", ")), "}"
+    )
+
+    cat(res, sep = "\n\n\n")
+}
+```
+
+# Summary
+
+I am a MD-oncologist, but one day I came up with the crazy idea of pursuing a PhD. Passionate about leukemia/lymphoma/viruses and CAR-T therapies. Clinician-scientist aspirant.
+
+# Experience
+
+```{r}
+#| label: experience
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details,
+    "Team Lead for Transparent Social Analytics", "Department of Computational Social Science\nGESIS - Leibniz Institute for the Social Sciences", "03/2022 - Present", "I am coordinating a project to build an Open Science platform with reusable code and tutorials to analyze digital behaviour data. I am also doing research on Open Science practices and I implement tools to enhance reproducibility and make methods accessible in R",
+    "Presidential Fellow", "Sociology Department\nUniversity of Manchester", "09/2018 - 02/2022",
+    "I did research on Disinformation on Social Media which involved the analysis of large scale and unstructured data sets with R and Bash",
+    "Post Doctoral Researcher", "Chair of Social Networks\nETH Zurich", "11/2017 - 08/2018", "I developed new methods to analyze social networks and I gathered and analyzed large datsets from Social Media APIs",
+    "Post Doctoral Researcher", "Department of Computer \\& Information Science\nUniversity of Konstanz", "10/2015 - 10/2017", "I developed new methods to analyze social networks and scraped, harmonized, and analyzed a large corpus of football data",
+    "Ph.D. Candidate", "Department of Computer \\& Information Science\nUniversity of Konstanz", "11/2012 - 09/2015", "I developed new methods to analyze social networks and implemented these methods in R packages using R and C++"
+) |>
+    cvevents(when = "dates", what = "role", where = "institution", descr = "details")
+```
+
+# Projects
+
+See my [github profile](https://github.com/schochastics) for a comprehensive list of open source projects.
+
+```{r}
+#| label: proj
+#| output: asis
+tibble::tribble(
+    ~what, ~role, ~items,
+    "R packages", "Creator and Maintainer", c("edgebundle", "graphlayouts", "levelnet", "netrankr", "netUtils", "networkdata", "PSAWR", "roughnet", "roughsf", "rtoot", "Rtumblr", "signnet", "snahelper", "webbotparseR", "webtrackR"),
+    "R packages", "Contributor", c("backbone", "ggraph", "multigraphr", "netropy", "rang", "rgraph6"),
+    "Quarto extensions", "Creator and Maintainer",
+    c("Academicons (shortcodes)", "Blackboard (revealjs theme)", "sketchy (html theme)", "share buttons (filter)", "nutshell (filter)", "quartocities (website template)", "quartocv (cv templates)"),
+    "soccerverse.com (football analytics website)", "Creator and Maintainer",
+    c(
+        "Manual and automated gathering of football results around the world",
+        "Harmonizing data (e.g. club names and managers)",
+        "Implementation of ranking algorithms",
+        "Predicting of league tables and matchforecasting",
+        "Uses R, JavaScript, HTML, and CSS",
+        "around 1000 visitors/month"
+    )
+) |>
+    cvproj(what = "what", role = "role", items = "items")
+
+```
+
+# Publications
