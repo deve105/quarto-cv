@@ -24,6 +24,10 @@ sidebar:
           exp: 
             text: "3+ yrs."
             num: 0.6
+        - text: Bash/Linux
+          exp: 
+            text: "1+ yrs."
+            num: 0.7
         - text: Rmarkdown
           exp: 
             text: "3+ yrs."
@@ -40,6 +44,7 @@ sidebar:
       items:
         - Git
         - RStudio
+        - Python
         - VS Code, Positron
         - Terminal (bash)
     - name: QR code
@@ -138,7 +143,6 @@ tibble::tribble(
 
 # Projects
 
-See my [github profile](https://github.com/schochastics) for a comprehensive list of open source projects.
 
 ```{r}
 #| label: proj
