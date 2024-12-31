@@ -210,6 +210,8 @@ $endif$
 $endif$
 $if(nocite-ids)$
 \nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
+$else$
+\nocite{*} % This line ensures all references are included, even those not cited in the document
 $endif$
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
@@ -496,7 +498,13 @@ $endif$
 		%	META SKILLS
 		%----------------------------------------------------------------------------------------
 		$for(sidebar.bullets)$
+		$if(sidebar.bullets.image)$
+		\begin{center}
+    	\includegraphics[width=0.8\linewidth]{$sidebar.bullets.image$}
+		\end{center}
+		$else$
 		\icontext{caret-right}{12}{$it$}\\[6pt]
+		$endif$
 		$endfor$
 
 		$for(sidebar.sections)$

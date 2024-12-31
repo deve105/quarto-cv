@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1735119182 "/Users/denriquez/Documents/GitHub/CV_qmd/_extensions/schochastics/modern2-cv/template.tex" "template.pdf" "template" 1735119182
+["pdflatex"] 1735637146 "/Users/denriquez/Documents/GitHub/quarto-cv/_extensions/schochastics/modern2-cv/template.tex" "template.pdf" "template" 1735637146
   "$cvfont$.sty" 0 -1 0 ""
-  "/Users/denriquez/Documents/GitHub/CV_qmd/_extensions/schochastics/modern2-cv/template.tex" 1735119181 17037 9de21115696142ca83da8d0341ff308b ""
+  "/Users/denriquez/Documents/GitHub/quarto-cv/_extensions/schochastics/modern2-cv/template.tex" 1735637145 17290 fd6ef8a3cf54ae9f140e076f8ef34c2d ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/babel-english/english.ldf" 1496785618 7008 9ff5fdcc865b01beca2b0fe4a46231d4 ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/babel/babel.sty" 1645915365 147649 823237dc86e8acfaa45204ca8085a60e ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def" 1643231327 5233 d5e383ed66bf272b71b1a90b596e21c6 ""
@@ -36,8 +36,8 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1662097763 2826425 c83157bcfd4d2df79e8ce297bbc6d051 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "template.aux" 1735119181 32 3985256e7290058c681f74d7a3565a19 ""
-  "template.tex" 1735119181 17037 9de21115696142ca83da8d0341ff308b ""
+  "template.aux" 0 -1 0 ""
+  "template.tex" 1735637145 17290 fd6ef8a3cf54ae9f140e076f8ef34c2d ""
   (generated)
   "template.log"
   "template.pdf"

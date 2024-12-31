@@ -11,4 +11,4 @@ contributes:
       template-partials:
         - partials/biblio.tex
       template: template.tex
-
+      
