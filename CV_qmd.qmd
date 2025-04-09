@@ -13,7 +13,6 @@ sidebar:
   bullets:
     - Kagoshima, Japan.
     - 36 years-old Peruvian clinician-scientist.
-    - RENACYT Level III
     - image: qrcode.png
   sections: 
     - name: Skills
@@ -193,7 +192,7 @@ cvproj <- function(tbl,what,role,items){
 
 # Summary
 
-I am a MD-oncologist, but one day I came up with the crazy idea of pursuing a PhD. Passionate about leukemia/lymphoma/viruses and CAR-T therapies. Clinician-scientist aspirant.
+I am an MD oncologist with a deep fascination for the interplay between viruses and lymphoid malignancies—particularly HTLV-1-driven adult T-cell leukemia/lymphoma (ATLL). Though firmly rooted in clinical practice, I’ve been captivated by the translational potential of virology and immunotherapy, leading me to pursue the a PhD. My research interests lie at the intersection of leukemia/lymphoma biology, viral oncogenesis, and emerging CAR-T strategies, with the ultimate goal of bridging bench insights to bedside impact as a clinician-scientist.
 
 # Experience
 
