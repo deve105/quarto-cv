@@ -122,6 +122,7 @@ biblatex: true
 biblio-style: vancouver
 biblatexoptions:
   - backend=biber
+  - sorting=ydnt
 biblio-title: Peer-Reviewed Articles
 execute: 
   echo: false
@@ -220,13 +221,13 @@ experience |>
 
 # Projects
 
-* T-cell project for LATAM.
+* T-cell Lymphoma Project in LATAM.
 
-* HTLV-1 and ATLL genomic differences among indigenous populations in LATAM.
+* Thesis: Comparative Analysis of Immune and Genomic Profiles in HTLV-1-Associated ATLL: Indigenous Latin American vs. Japanese Cohorts
 
 # Oral Presentations
 
-* International HTLV conference (London, UK) - 2024.
+* Genomic diversity of HTLV-1 in South America. International HTLV conference (London, UK) - 2024.
 
 * Japanese HTLV-1 Society Annual Conference (Tokyo, Japan) - 2024.
 
