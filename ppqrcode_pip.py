@@ -3,8 +3,8 @@ import qrcode
 from PIL import Image, ImageDraw
 
 profile = "https://deve105.github.io/me/"
-buyme = "https://buymeacoffee.com/enriquezvdv"
-
+#buyme = "https://buymeacoffee.com/enriquezvdv"
+buyme="https://github.com/deve105/quarto-cv/blob/main/fido.gif"
 qr = qrcode.QRCode(
     version=6,  # size of the QR code
     error_correction=qrcode.constants.ERROR_CORRECT_H,  # Error correction level
@@ -77,4 +77,4 @@ img.paste(circle_img, dog_pos, circle_img)
 img.paste(dog_img, dog_pos, dog_img)
 
 # Save the result
-img.save("qrcode2.png")
+img.save("qrcode3.png")
