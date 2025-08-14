@@ -1,33 +1,17 @@
 ---
-title: 
 format:
   modern2-cv-pdf: default
-author: Daniel Enriquez-Vera, MD, MSc, PhD
+author: Daniel Enriquez-Vera, MD, MSc, PhD(c)
 cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
 cvcolor: 
   main: 348b0e
   accent: 257b00
-jobtitle: Clinician-Scientist (Medical Oncologist)
+jobtitle: Medical Oncologist
 sidebar:
   image: profilepic.jpg
-
   bullets:
     - image: qrcode.png
   sections: 
-    - name: Skills
-      items:
-        - text: R
-          exp: 
-            text: "5+ yrs."
-            num: 0.9
-        - text: Python
-          exp: 
-            text: "3+ yrs."
-            num: 0.6
-        - text: Bash/Linux
-          exp: 
-            text: "1+ yrs."
-            num: 0.8
     - name: Education
       items:
         - text: "Ph.D. in Virology-Immunology"
@@ -41,12 +25,29 @@ sidebar:
         - text: "Clinical research fellowship in Hematology/Oncology"
           inst: "Peruvian National Cancer Institute (INEN)"
           time: "07/2017 - 07/2018"
+          details: []
         - text: "Medical Oncology Residency"
           inst: "Universidad Privada Cayetano Heredia (UPCH)"
           time: "07/2013 - 06/2017"
+          details: []
         - text: "Medical Doctor (MD)"
           inst: "Universidad Nacional Pedro Ruiz Gallo (UNPRG)"
           time: "03/2005 - 03/2012"
+          details: []
+    - name: Skills
+      items:
+        - text: R
+          exp: 
+            text: "5+ yrs."
+            num: 0.9
+        - text: Python
+          exp: 
+            text: "3+ yrs."
+            num: 0.6
+        - text: Bash
+          exp: 
+            text: "1+ yrs."
+            num: 0.8
     - name: Contact
       items:
         - icon: map-marker
@@ -67,6 +68,7 @@ sidebar:
         - icon: orcid
           text: 0000-0002-0855-8936
           href: https://orcid.org/0000-0002-0855-8936
+    
     - name: Awards
       items:
         - text: "Advanced Clinical Research Institute - LATAM"
@@ -75,51 +77,27 @@ sidebar:
         - text: "Certificate of Competence in Lymphoma"
           inst: "European School of Oncology - Ulm University"
           time: "04/2020 - 04/2022"
-        - text: "SGD Leaders PhD Scholarship"
-          inst: "Japanese Agency of International Cooperation - JICA"
-          time: "10/2021 - 06/2026"
-        - text: "Global Hematology Fellowship - British Haematology Society"
-          inst: "University College of London"
-          time: "02/2020 - 04/2020"
-        - text: "Sakura Science Exchange Program"
-          inst: "Miyazaki University"
-          time: "01/2020"
-        - text: "Global Fellowship of the International Chronic Myeloid Leukemia Foundation"
-          inst: "City of Hope - Los Angeles, USA"
-          time: "07/2018 - 08/2018"
-        - text: "Clinical Research Institute - LATAM"
-          inst: "American Society of Hematology - Rio de Janeiro, Brazil"
-          time: "04/2018"
         - text: "ASH Annual Meeting - Abstract Achievement Award" 
           inst: "American Society of Hematology - Chicago, USA"
           time: "12/2017"   
-        - text: "Global Observership Program" 
-          inst: "MD Anderson Cancer Center - Houston, USA"
-          time: "12/2017 - 12/2017"
-        - text: "Global Training Program" 
-          inst: "Memorial Sloan Kettering Cancer Center - NYC, USA"
-          time: "04/2017 - 05/2017"
-     
-bibliography: CVDEV.bib
+bibliography: CVDEV2.bib
 biblio-config: true
 biblatex: true
-biblio-style: authoryear
+biblio-style: vancouver
+biblio-title: "Selected Peer-reviewed Articles"
 biblatexoptions:
   - backend=biber
   - sorting=ydnt
   - maxnames=3
   - minnames=1
-  - doi=true
+  - doi=false
   - isbn=false
   - url=false
   - giveninits=true
-biblio-title: Peer-Reviewed Articles
 execute: 
   echo: false
 nocite: '@all'
-
 ---
-
 ```{python}
 #| eval: false
 
@@ -176,19 +154,16 @@ cvproj <- function(tbl,what,role,items){
     cat(res, sep = "\n\n\n")
 }
 ```
-
 # Summary
-
 I am a **clinician-scientist** specializing in cancer immunology and lymphoid hematologic malignancies with a focus on global health equity. My clinical training targeted neglected T-cell malignancies affecting vulnerable populations, including HTLV-1-associated ATLL, EBV-driven lymphomas, and CTCL. Through my PhD training in retroviral infections at Kagoshima University, Japan, I developed expertise in **cancer genomics, immunology, and molecular techniques**.
 
-# Experience
+# Clinical Experience
 ```{r}
 #| label: experience
 #| output: asis
 #| message: false
 
 library(googlesheets4)
-
 cv_url = "https://docs.google.com/spreadsheets/d/1cjuCB2xqIFENg2lwVYsmfMwWF-rlHCatq7cCVxlIJJY/edit?gid=0#gid=0"
 
 gs4_auth(email = "daniel.enriquez.v@upch.pe", cache = TRUE)
@@ -200,18 +175,13 @@ experience |>
 
 
 ```
-
-# Projects
-
-* T-cell Lymphoma Project in LATAM.
-
-* Thesis: Comparative Analysis of Immune and Genomic Profiles in HTLV-1-Associated ATLL: Indigenous Latin American vs. Japanese Cohorts
-
 # Oral Presentations
-
+* Genomic and Inmune Disparities of ATL and HTLV in South America. Disparities in Hematological Malignancies (New York, USA) - 2025.
 * Genomic diversity of HTLV-1 in South America. International HTLV conference (London, UK) - 2024.
 
 * Japanese HTLV-1 Society Annual Conference (Tokyo, Japan) - 2024.
+
+
 
 ```{r}
 #| label: proj
@@ -221,5 +191,4 @@ experience |>
 #    cvproj(what = "what", role = "role", items = "items")
 
 ```
-
 # Publications

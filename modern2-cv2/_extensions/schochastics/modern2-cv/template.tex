@@ -196,12 +196,10 @@ $if(csl-refs)$
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 $endif$
 
-
 $if(biblio-config)$
 $if(natbib)$
 \usepackage[$natbiboptions$]{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
-
 $endif$
 $if(biblatex)$
 \usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
@@ -209,13 +207,9 @@ $for(bibliography)$
 \addbibresource{$bibliography$}
 $endfor$
 $endif$
-
 $endif$
-
 $if(nocite-ids)$
 \nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
-$else$
-\nocite{*} % This line ensures all references are included, even those not cited in the document
 $endif$
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
@@ -247,6 +241,7 @@ $endif$
 % can also be used for other boxes / environments
 \newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
 	
+
 
 %============================================================================%
 %
@@ -288,7 +283,7 @@ $endif$
 % param 1: section title
 \newlength{\barw}
 \newcommand{\cvsection}[1] {
-	\vspace{10pt}
+	\vspace{14pt}
 	\settowidth{\barw}{\textbf{\LARGE #1}}
 	\cvtext{
 		\textbf{\LARGE{\textcolor{darkcol}{#1}}}\\[-4pt]
@@ -297,7 +292,7 @@ $endif$
 }
 
 \newcommand{\cvsubsection}[1] {
-	\vspace{10pt}
+	\vspace{14pt}
 	\settowidth{\barw}{\textbf{\Large #1}}
 	\cvtext{
 		\textbf{\Large{\textcolor{darkcol}{#1}}}\\[-4pt]
@@ -306,7 +301,7 @@ $endif$
 }
 
 \newcommand{\cvheadline}[1] {
-	\vspace{10pt}
+	\vspace{16pt}
 	\cvtext{
 		\textbf{\Huge{\textcolor{accentcol}{#1}}}\\[-4pt]
 		 
@@ -314,7 +309,7 @@ $endif$
 }
 
 \newcommand{\cvsubheadline}[1] {
-	\vspace{10pt}
+	\vspace{16pt}
 	\cvtext{
 		\textbf{\huge{\textcolor{darkcol}{#1}}}\\[-4pt]
 		 
@@ -370,7 +365,7 @@ $endif$
 			\cvtext{#4}\\
 		}
 	}
-	\vspace{5pt}
+	\vspace{14pt}
 }
 
 \newcommand{\cvproj}[3] {
@@ -384,7 +379,7 @@ $endif$
 			\cvtext{#3}\\
 		}
 	}
-	\vspace{5pt}
+	\vspace{14pt}
 }
 
 %----------------------------------------------------------------------------------------
@@ -396,24 +391,18 @@ $endif$
 % param 2: subtitle (optional)
 % param 3: customer, employer, etc,. (optional)
 % param 4: info text (optional)
-\newcommand{\cvmetaevent}[4]{
-    \textcolor{maincol} { \cvtext{\textbf{\begin{flushleft}#1\end{flushleft}}}}
+\newcommand{\cvmetaevent}[4] {
+	\textcolor{maincol} { \cvtext{\textbf{\begin{flushleft}#1\end{flushleft}}}}
 
-    \ifthenelse{\isempty{#2}}{}{
-        \textcolor{black} {\cvtext{\textbf{#2}} }
-    }
+	\ifthenelse{\isempty{#2}}{}{
+	\textcolor{black} {\cvtext{\textbf{#2}} }
+	}
 
-    \ifthenelse{\isempty{#3}}{}{
-        \cvtext{{ \textcolor{maincol} {#3} }}\\
-    }
+	\ifthenelse{\isempty{#3}}{}{
+		\cvtext{{ \textcolor{maincol} {#3} }}\\
+	}
 
-    \ifthenelse{\isempty{#4}}{
-        % If details is empty, use a smaller vertical space
-        \vspace{1pt}
-    }{
-        % If details is present, print it and use normal space
-        \cvtext{#4}\\[1pt]
-    }
+	\cvtext{#4}\\[14pt]
 }
 
 %---------------------------------------------------------------------------------------
@@ -468,9 +457,8 @@ $endif$
 %
 %
 %============================================================================%
-
-
 \begin{document}
+
 \columnratio{0.31}
 \setlength{\columnsep}{2.2em}
 \setlength{\columnseprule}{4pt}
@@ -496,25 +484,15 @@ $endif$
         \includegraphics[width=\linewidth]{$sidebar.image$}
         $endif$
 		\fcolorbox{white}{white}{\begin{minipage}[c][1.5cm][c]{1\mpwidth}
-				\raggedright %
-				\vspace{1.8cm}
 				\LARGE{\textbf{\textcolor{maincol}{$author$}}} \\[2pt]
 				\normalsize{ \textcolor{maincol} {$jobtitle$} }
 			\end{minipage}}
-
-		\vspace{1.5cm}
 
 		%---------------------------------------------------------------------------------------
 		%	META SKILLS
 		%----------------------------------------------------------------------------------------
 		$for(sidebar.bullets)$
-		$if(sidebar.bullets.image)$
-		\vspace{0em}
-    	\includegraphics[width=0.8\linewidth]{$sidebar.bullets.image$}
-		\vspace{0em}
-		$else$
-		\icontext{caret-right}{12}{$it$}\\[3pt]
-		$endif$
+		\icontext{caret-right}{12}{$it$}\\[6pt]
 		$endfor$
 
 		$for(sidebar.sections)$
