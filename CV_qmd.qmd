@@ -1,18 +1,17 @@
 ---
-title: Untitled
+title: 
 format:
   modern2-cv-pdf: default
-author: Daniel Enriquez-Vera
+author: Daniel Enriquez-Vera, MD, MSc, PhD
 cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
 cvcolor: 
   main: 348b0e
   accent: 257b00
-jobtitle: PhD(c) at **Kagoshima University**
+jobtitle: Clinician-Scientist (Medical Oncologist)
 sidebar:
   image: profilepic.jpg
+
   bullets:
-    - Kagoshima, Japan.
-    - 36 years-old Peruvian clinician-scientist.
     - image: qrcode.png
   sections: 
     - name: Skills
@@ -20,7 +19,7 @@ sidebar:
         - text: R
           exp: 
             text: "5+ yrs."
-            num: 0.8
+            num: 0.9
         - text: Python
           exp: 
             text: "3+ yrs."
@@ -28,23 +27,12 @@ sidebar:
         - text: Bash/Linux
           exp: 
             text: "1+ yrs."
-            num: 0.7
-        - text: Rmarkdown, Quarto
-          exp: 
-            text: "3+ yrs."
-            num: 0.6
-    - name: Tools
-      items:
-        - Git
-        - RStudio
-        - Python
-        - VS Code, Positron
-        - Terminal (bash)
+            num: 0.8
     - name: Education
       items:
         - text: "Ph.D. in Virology-Immunology"
           inst: "Kagoshima University"
-          time: "04/2022 - 04/2026"
+          time: "04/2022 - 03/2026"
           details: "Thesis: Mechanisms of T-cell dysfunction during HTLV-1 to ATLL progression"
         - text: "Master in Oncology"
           inst: "Universidad Privada Cayetano Heredia"
@@ -111,18 +99,20 @@ sidebar:
         - text: "Global Training Program" 
           inst: "Memorial Sloan Kettering Cancer Center - NYC, USA"
           time: "04/2017 - 05/2017"
-        - text: "Scholarship - Peruvian Cancer Foundation" 
-          inst: "Fundación Peruana de Cáncer - Lima, Perú"
-          time: "2017" 
-
-         
+     
 bibliography: CVDEV.bib
 biblio-config: true
 biblatex: true
-biblio-style: vancouver
+biblio-style: authoryear
 biblatexoptions:
   - backend=biber
   - sorting=ydnt
+  - maxnames=3
+  - minnames=1
+  - doi=true
+  - isbn=false
+  - url=false
+  - giveninits=true
 biblio-title: Peer-Reviewed Articles
 execute: 
   echo: false
@@ -157,7 +147,7 @@ img.save("qrcode.png")
 ```
 
 ```{r}
-
+#install.packages("reticulate")
 cvevents <- function(tbl, when, what, where, descr) {
 
     command_start <- "\\cvevent"
@@ -171,13 +161,9 @@ cvevents <- function(tbl, when, what, where, descr) {
 
     cat(res, sep = "\n\n\n")
 }
-
-
-
 ```
 ```{r}
 #| label: cvevents
-
 
 cvproj <- function(tbl,what,role,items){
     command_start <- "\\cvproj"
@@ -193,11 +179,9 @@ cvproj <- function(tbl,what,role,items){
 
 # Summary
 
-I am an MD oncologist with a deep fascination for the interplay between viruses and lymphoid malignancies—particularly HTLV-1-driven adult T-cell leukemia/lymphoma (ATLL). Though firmly rooted in clinical practice, I’ve been captivated by the translational potential of virology and immunotherapy, leading me to pursue the a PhD. My research interests lie at the intersection of leukemia/lymphoma biology, viral oncogenesis, and emerging CAR-T strategies, with the ultimate goal of bridging bench insights to bedside impact as a clinician-scientist.
+I am a **clinician-scientist** specializing in cancer immunology and lymphoid hematologic malignancies with a focus on global health equity. My clinical training targeted neglected T-cell malignancies affecting vulnerable populations, including HTLV-1-associated ATLL, EBV-driven lymphomas, and CTCL. Through my PhD training in retroviral infections at Kagoshima University, Japan, I developed expertise in **cancer genomics, immunology, and molecular techniques**.
 
 # Experience
-
-
 ```{r}
 #| label: experience
 #| output: asis
@@ -213,8 +197,6 @@ experience = suppressMessages(read_sheet(cv_url, sheet = "Hoja 1"))
 
 experience |>
     cvevents(when = "dates", what = "role", where = "institution", descr = "details")
-
-
 
 
 ```
